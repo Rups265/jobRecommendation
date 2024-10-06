@@ -13,10 +13,9 @@ const connectDataBase = async () => {
     const hashPassword = await hashItem(process.env.ADMIN_PASSWORD);
      mongoose
       .connect(url)
-      .then(() => {
+      .then(() => { 
         let data = {
           name: process.env.ADMIN_NAME,
-
           
           userId: "admin_1",
           password: hashPassword,
